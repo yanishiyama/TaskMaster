@@ -2,13 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="green">#004400</color>
+    <color name="green">#00FF00</color>
 
-    <color name="color_status_todo">#FF841A</color>
-    <color name="color_status_done">#04D5C1</color>
+    <color name="color_status_todo">#FF5722</color>
+    <color name="color_status_done">#03A9F4</color>
 
-    <color name="color_default">#02BB77</color>
-    <color name="color_delete">#FF4C3B</color>
-    <color name="color_details">#04D5C1</color>
+    <color name="color_default">#CDDC39</color>
+    <color name="color_delete">#E91E63</color>
+    <color name="color_details">#3F51B5</color>
 
 </resources>
