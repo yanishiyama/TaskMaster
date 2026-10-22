@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.yan.task" />
+                  <option name="mobileSdkAppId" value="1:353274778783:android:19dc467990eec2fb8efeaa" />
+                  <option name="projectId" value="taskapp-e7b3a" />
+                  <option name="projectNumber" value="353274778783" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
