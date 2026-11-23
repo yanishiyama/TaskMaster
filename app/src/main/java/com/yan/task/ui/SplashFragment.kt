@@ -53,6 +53,7 @@ class SplashFragment : Fragment() {
                 e.message.toString(),
                 Toast.LENGTH_SHORT
             ).show()
+            findNavController().navigate(R.id.action_splashFragment_to_authentication)
         }
     }
 

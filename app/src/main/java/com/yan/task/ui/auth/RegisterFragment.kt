@@ -7,11 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
 import com.yan.task.R
 import com.yan.task.databinding.FragmentRegisterBinding
 import com.yan.task.util.initToolbar
 import com.yan.task.util.showBottomSheet
-import com.google.firebase.auth.FirebaseAuth
 
 class RegisterFragment : Fragment() {
 
@@ -30,56 +31,52 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        auth = FirebaseAuth.getInstance()
         initToolbar(binding.toolbar)
         initListener()
     }
 
-    private fun initListener(){
-        binding.btnEnviar.setOnClickListener {
+    private fun initListener() {
+        binding.btnRegistrar.setOnClickListener {
             validateData()
         }
     }
 
-    private fun validateData(){
-        val email = binding.campoEmail.text.toString().trim()
-        val senha = binding.campoSenha.text.toString().trim()
+    private fun validateData() {
+        val email = binding.digiteEmail.text.toString().trim()
+        val senha = binding.digiteSenha.text.toString().trim()
 
-        if (email.isNotBlank()){
-            if (senha.isNotBlank()){
+        if (email.isNotBlank()) {
+            if (senha.isNotBlank()) {
                 binding.progressBar.isVisible = true
-                registerUser(email,senha)
-            } else{
+                registerUser(email, senha)
+            } else {
                 showBottomSheet(message = getString(R.string.password_empty_register_fragment))
             }
-        }else{
+        } else {
             showBottomSheet(message = getString(R.string.email_empty_register_fragment))
         }
     }
 
-    private fun registerUser(email:String, password: String){
+    private fun registerUser(email: String, password: String) {
         try {
-            val auth = FirebaseAuth.getInstance()
-
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-
+                        findNavController().navigate(R.id.action_global_homeFragment)
                     } else {
                         binding.progressBar.isVisible = false
-
-                        Toast.makeText(requireContext(),task.exception?.message, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
-        } catch (e: Exception){
-            Toast.makeText(requireContext(),e.message.toString(), Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            binding.progressBar.isVisible = false
+            Toast.makeText(requireContext(), e.message.toString(), Toast.LENGTH_SHORT).show()
         }
-
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

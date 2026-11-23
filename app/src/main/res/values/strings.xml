@@ -11,7 +11,14 @@
     <string name="email_empty">Preencha seu email!</string>
     <string name="email_empty_register_fragment">Preencha um e-mail válido.</string>
     <string name="password_empty_register_fragment">Preencha uma senha.</string>
-    <string name="description_empty_form_task_fragment" />
+    <string name="description_empty_form_task_fragment">Informe a descrição da tarefa.</string>
+    <string name="text_save_sucess_form_task_fragment">Tarefa salva com sucesso!</string>
+    <string name="error_generic">Ocorreu um erro. Tente novamente mais tarde.</string>
+    <string name="text_list_task_empty">Nenhuma tarefa cadastrada!</string>
+    <string name="text_delete_sucess_task">Tarefa excluída com sucesso!</string>
+    <string name="text_title_dialog_delete">Atenção</string>
+    <string name="text_message_dialog_delete">Deseja realmente remover essa tarefa?</string>
+    <string name="text_button_dialog_confirm">Confirmar</string>
     <string name="mensagem">Mensagem</string>
     <string name="entendi">Entendi</string>
     <string name="atencao">Atenção</string>
@@ -35,4 +42,9 @@
     <string name="add_task">Add task</string>
     <string name="anterior">Anterior</string>
     <string name="proximo">Próximo</string>
+    <string name="text_title_dialog_confirm_logout">Deseja sair da sua conta?</string>
+    <string name="text_button_dialog_confirm_logout">Confirmar</string>
+    <string name="text_message_dialog_confirm_logout">Aperte em confirmar para sair da sua conta</string>
+    <string name="text_message_recover_account_fragment">Enviamos um link para o seu e-mail para alteração de senha.</string>
+    <string name="text_list_task_load">Aguarde, estamos carregando as informações!</string>
 </resources>

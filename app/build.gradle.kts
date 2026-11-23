@@ -53,4 +53,8 @@ dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:35.0.2"))
     implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    implementation("com.google.firebase:firebase-analytics")
 }
